@@ -1,7 +1,7 @@
 ---
 name: code-research-crafter
 description: A complete 6-phase workflow for researching codebases, designing enhancement proposals, and publishing RFCs to GitHub. Covers code analysis, academic research, solution design, documentation generation, and RFC publication.
-version: 1.0.0
+version: "1.0.0"
 license: MIT
 metadata:
   openclaw:
