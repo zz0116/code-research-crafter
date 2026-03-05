@@ -1,7 +1,22 @@
 ---
 name: code-research-crafter
-description: A complete workflow for researching codebases, designing enhancement proposals, and publishing RFCs to GitHub. Covers code analysis, academic research, solution design, documentation generation, and RFC publication.
+description: A complete 6-phase workflow for researching codebases, designing enhancement proposals, and publishing RFCs to GitHub. Covers code analysis, academic research, solution design, documentation generation, and RFC publication.
+version: 1.0.0
 license: MIT
+metadata:
+  openclaw:
+    emoji: "🔬"
+    homepage: https://github.com/zz0116/code-research-crafter
+    requires:
+      bins:
+        - git
+    tags:
+      - research
+      - rfc
+      - code-analysis
+      - technical-writing
+      - documentation
+      - open-source
 ---
 
 # Code Research Crafter
@@ -52,189 +67,139 @@ grep "[pattern]" src/**/*.ts
 
 **Step 3: Document findings**
 - Note current architecture limitations
-- Identify specific code locations causing issues
-- Quantify problems with metrics (token counts, performance data, etc.)
+- Identify specific code locations and their roles
+- Quantify problems (e.g., "50% of files lack documentation")
 
 ### Phase 2: Academic & Community Research
 
-**Step 4: Search for academic papers**
-```
-WebSearch: [topic] [domain] 2024 2025 paper
-WebSearch: "[specific technique]" LLM agent [year]
-```
+**Step 1: Search for academic papers**
+- Use WebSearch to find relevant research papers
+- Focus on papers from 2024-2025
+- Look for algorithms, data structures, and approaches
 
-**Step 5: Extract key insights from papers**
-- Core innovations and algorithms
-- Data models and architectures
-- Experimental results and benchmarks
-- Applicability to target codebase
+**Step 2: Analyze GitHub community**
+- Search for related issues and discussions
+- Check maintainer responses and feedback
+- Identify pain points from user comments
 
-**Step 6: Analyze GitHub community**
-```
-WebSearch: site:github.com/[org]/[repo]/issues [keywords]
-```
-
-- Read issue descriptions and discussions
-- Identify common pain points
-- Note maintainer responses and status
-- Find related PRs and their outcomes
+**Step 3: Extract key insights**
+- Document relevant algorithms and approaches
+- Note community sentiment and feature requests
+- Identify gaps between current implementation and best practices
 
 ### Phase 3: Solution Design
 
-**Step 7: Define design principles**
-- Progressive enhancement (each layer independently valuable)
-- Human organization analogies (HR records, team Slack, etc.)
-- Backward compatibility
-- Cost-awareness (token efficiency, performance)
+**Step 1: Define design principles**
+- Evidence-based: Reference specific code locations
+- Academic rigor: Cite recent papers
+- Human-centered: Use organization analogies
+- Cost-aware: Track token/performance implications
 
-**Step 8: Design architecture**
-```
-Layer N: [Name] ("Human analogy")
-├── Problem: [Current limitation]
-├── Solution: [High-level approach]
-├── Data Model: [SQL schemas or interfaces]
-├── Workflow: [Step-by-step process]
-└── Integration: [How it fits existing code]
-```
+**Step 2: Architect the solution**
+- Design layered architecture (Foundation → Enhancement → Intelligence → Governance)
+- Define data models (dual-track: user-defined + system-learned)
+- Plan visibility tiers (private/team/global)
 
-**Step 9: Design data models**
-- SQL table schemas with field descriptions
-- JSON structures for configurations
-- TypeScript interfaces for type safety
-
-**Step 10: Plan implementation phases**
-| Phase | Scope | Dependencies | Effort | Value |
-|-------|-------|--------------|--------|-------|
-| P1 | ... | None | Small | ... |
-| P2 | ... | P1 | Medium | ... |
+**Step 3: Plan implementation phases**
+- Phase 1: Foundation (data collection)
+- Phase 2: Enhancement (builds on Phase 1)
+- Phase 3: Intelligence (AI/ML on data)
+- Phase 4: Governance (control/monitoring)
 
 ### Phase 4: Documentation Generation
 
-**Step 11: Generate technical document**
-```python
-from docx import Document
+**Step 1: Create structured documents**
+- Use python-docx for professional formatting
+- Include table of contents, headers, and proper structure
+- Add citations and references
 
-doc = Document()
-# Sections:
-# 1. Problem Analysis (with code evidence)
-# 2. Academic Frontiers (paper summaries)
-# 3. Solution Design (layered architecture)
-# 4. Layer Synergy (complete scenario)
-# 5. Implementation Plan
-# 6. Open Questions
-```
+**Step 2: Generate bilingual versions**
+- Create English version for international communities
+- Create Chinese version for local stakeholders
+- Ensure consistent terminology
 
 ### Phase 5: English RFC Writing
 
-**Step 12: Write RFC markdown**
+**Step 1: Structure the RFC**
 ```markdown
-## [RFC] [Title]
+# RFC: [Title]
 
-### Motivation
-[Problem statement with quantified impact]
+## Problem Statement
+[Quantified problem with code evidence]
 
-### Prior Art & Related Issues
-| Issue | Proposal | Status |
+## Prior Art
+[Academic research and existing solutions]
 
-**Key academic references:**
-- **Paper** (Authors, Year) — Key insight
+## Proposed Solution
+[Architecture, data models, implementation phases]
 
-### Proposed Architecture
-[ASCII diagram]
+## Trade-offs
+[Cost analysis, migration path, risks]
 
-#### Layer N: [Name] ("Analogy")
-**Problem:** ...
-**Solution:** ...
-**Data model:** ```sql ... ```
-
-### Implementation Plan
-| Phase | Scope | Dependencies | Effort |
-
-### Open Questions
-1. ...
-
-### Call for Collaboration
-[Work split]
+## Call for Collaboration
+[How to get involved]
 ```
+
+**Step 2: Follow community conventions**
+- Use existing RFCs as templates
+- Reference GitHub issues and discussions
+- Include code examples and diagrams
 
 ### Phase 6: GitHub Publication
 
-**Step 13: Submit to GitHub**
-- Open issue/PR creation page
-- Fill title with [RFC] or [feature] prefix
-- Paste complete markdown
-- Submit and monitor feedback
+**Step 1: Prepare the RFC**
+- Create markdown file in appropriate location
+- Ensure proper formatting and links
+- Add relevant labels
 
-## Key Principles
+**Step 2: Submit to GitHub**
+- Create issue or discussion with RFC content
+- Reference related issues
+- Tag relevant maintainers
 
-### 1. Evidence-Based Analysis
-- Quote specific code locations
-- Quantify problems with metrics
-- Reference actual GitHub issues
+**Step 3: Engage the community**
+- Respond to comments and questions
+- Update RFC based on feedback
+- Track implementation progress
 
-### 2. Academic Rigor
-- Find recent papers (2024-2025 preferred)
-- Extract specific algorithms and data models
-- Properly cite with arXiv/DOI links
+## Output Examples
 
-### 3. Human-Centered Design
-- Use human organization analogies
-- Design for gradual adoption
-- Consider technical and social aspects
+### Memory Consolidation RFC
+Combines Zettelkasten + PPR + Sleep Consolidation approaches for knowledge management.
 
-### 4. Cost Awareness
-- Track token/performance implications
-- Design for efficiency
-- Provide budget control mechanisms
+### Multi-Agent Collaboration RFC
+Features Capability Profiling and Shared Blackboard architecture for agent coordination.
 
-### 5. Community Engagement
-- Reference existing issues and contributors
-- Invite collaboration with specific work splits
-- Acknowledge prior art
+### Temporal Decay Bug Fixes
+Expands date pattern recognition in configuration interfaces.
 
-## Common Patterns
+## Best Practices
 
-### Layered Architecture
-```
-Layer 1: Foundation (data collection)
-Layer 2: Enhancement (builds on L1)
-Layer 3: Intelligence (AI/ML on data)
-Layer 4: Governance (control/monitoring)
-```
-
-### Dual-Track Data
-```
-User-defined (static): config, prompts
-System-learned (dynamic): metrics, patterns
-```
-
-### Visibility Tiers
-```
-private: owner only
-team: collaborators
-global: all users
-```
-
-## Tools & Resources
-
-- `glob` / `grep` / `read` - Code analysis
-- `WebSearch` / `WebFetch` - Academic research
-- `python-docx` - Document generation
-- `browser_use_desktop` - GitHub submission
-- `desktop_terminal_execute` - Git operations
-
-## Example Outputs
-
-This skill has been used to create:
-- Memory Consolidation RFC with Zettelkasten + PPR + Sleep Consolidation
-- Multi-Agent Collaboration RFC with Capability Profiling + Shared Blackboard
-- Temporal Decay bug fixes with expanded date patterns
-- i18n translation improvements for config pages
+1. **Quote specific code locations** - Always reference file paths and line numbers
+2. **Quantify problems** - Use metrics like "50% of files" or "3x performance improvement"
+3. **Cite recent research** - Prefer papers from 2024-2025
+4. **Use analogies** - Make complex concepts accessible with organization/workflow analogies
+5. **Design for adoption** - Include migration paths and gradual rollout plans
+6. **Track costs** - Document token usage, performance implications, and resource requirements
+7. **Engage early** - Reference existing issues and invite collaboration from the start
 
 ## Success Metrics
 
-- RFC receives community engagement (comments, reactions)
-- Problems quantified with code evidence
-- Solutions reference academic research
-- Implementation plan is phased and actionable
-- Documentation is clear for all audiences
+A successful Code Research Crafter output should:
+- ✅ Receive community engagement (comments, reactions)
+- ✅ Quantify problems with code evidence
+- ✅ Reference academic research
+- ✅ Provide phased, actionable implementation plans
+- ✅ Be clear for all audiences (technical and non-technical)
+
+## Tools & Resources
+
+- **Code Analysis**: `glob`, `grep`, `read`
+- **Academic Research**: `WebSearch`, `WebFetch`
+- **Documentation**: `python-docx` for professional document generation
+- **Publication**: `browser_use_desktop` for GitHub submission
+- **Version Control**: `desktop_terminal_execute` for Git operations
+
+## License
+
+MIT License - See LICENSE.txt for details.
