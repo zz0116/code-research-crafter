@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 > A complete workflow for researching codebases, designing enhancement proposals, and publishing RFCs to GitHub.
 
 ## 🎯 What is Code Research Crafter?
